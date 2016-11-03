@@ -7,9 +7,9 @@ then
 else
     parallel=$3
 fi
-
+rm p_* y_*
 # split input file
-split -l3 $1 p_
+split -l2 $1 p_
 NPROC=0
 for i in $(ls p_*)
 do
