@@ -14,7 +14,7 @@ NPROC=0
 for i in $(ls p_*)
 do
     echo "running rscript with $i"
-    java -jar /home/user01/GroIMP-1.4.2/app/core.jar --headless $i ./y_$i "maize_greenlab.gsz" &
+    java -jar /home/user01/GroIMP-1.4.2/app/core.jar --headless $i ./y_$i "maize_greenlab.gsz"  > /dev/null 2>&1 &
     NPROC=$(($NPROC+1))
     if [ "$NPROC" -ge $parallel ]
     then
